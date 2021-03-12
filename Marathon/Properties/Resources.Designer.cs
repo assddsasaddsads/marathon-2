@@ -173,6 +173,26 @@ namespace Marathon.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_math_90 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-plus-math-90", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_subtract_90 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-subtract-90", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap information {
             get {
                 object obj = ResourceManager.GetObject("information", resourceCulture);

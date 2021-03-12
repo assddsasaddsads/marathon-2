@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabelName = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -47,30 +46,26 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.labelBigNums = new System.Windows.Forms.Label();
+            this.metroLabelCharityName = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelSumInfo = new MetroFramework.Controls.MetroLabel();
+            this.metroLabelCharity = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBoxCharitySum = new MetroFramework.Controls.MetroTextBox();
+            this.metroButtonMinus = new MetroFramework.Controls.MetroButton();
+            this.metroButtonPlus = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton2
             // 
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton2.Location = new System.Drawing.Point(601, 365);
+            this.metroButton2.Location = new System.Drawing.Point(661, 419);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(116, 23);
             this.metroButton2.TabIndex = 69;
             this.metroButton2.Text = "Отмена";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackgroundImage = global::Marathon.Properties.Resources.help_info;
-            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton1.Location = new System.Drawing.Point(644, 166);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(27, 26);
-            this.metroButton1.TabIndex = 68;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
             // metroLabelName
             // 
@@ -341,11 +336,130 @@
             this.metroLabel7.Text = "Информация о спонсоре:";
             this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // labelBigNums
+            // 
+            this.labelBigNums.BackColor = System.Drawing.Color.White;
+            this.labelBigNums.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBigNums.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.labelBigNums.Location = new System.Drawing.Point(520, 251);
+            this.labelBigNums.Name = "labelBigNums";
+            this.labelBigNums.Size = new System.Drawing.Size(211, 115);
+            this.labelBigNums.TabIndex = 79;
+            this.labelBigNums.Text = "50";
+            this.labelBigNums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroLabelCharityName
+            // 
+            this.metroLabelCharityName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabelCharityName.Location = new System.Drawing.Point(497, 172);
+            this.metroLabelCharityName.Name = "metroLabelCharityName";
+            this.metroLabelCharityName.Size = new System.Drawing.Size(220, 29);
+            this.metroLabelCharityName.TabIndex = 74;
+            this.metroLabelCharityName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // metroLabelSumInfo
+            // 
+            this.metroLabelSumInfo.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabelSumInfo.Location = new System.Drawing.Point(497, 222);
+            this.metroLabelSumInfo.Name = "metroLabelSumInfo";
+            this.metroLabelSumInfo.Size = new System.Drawing.Size(220, 29);
+            this.metroLabelSumInfo.TabIndex = 75;
+            this.metroLabelSumInfo.Text = "Сумма пожертвований:";
+            this.metroLabelSumInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // metroLabelCharity
+            // 
+            this.metroLabelCharity.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabelCharity.Location = new System.Drawing.Point(497, 143);
+            this.metroLabelCharity.Name = "metroLabelCharity";
+            this.metroLabelCharity.Size = new System.Drawing.Size(220, 29);
+            this.metroLabelCharity.TabIndex = 76;
+            this.metroLabelCharity.Text = "Благотворительность:";
+            this.metroLabelCharity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // metroTextBoxCharitySum
+            // 
+            this.metroTextBoxCharitySum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.metroTextBoxCharitySum.CustomButton.Image = null;
+            this.metroTextBoxCharitySum.CustomButton.Location = new System.Drawing.Point(72, 1);
+            this.metroTextBoxCharitySum.CustomButton.Name = "";
+            this.metroTextBoxCharitySum.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.metroTextBoxCharitySum.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBoxCharitySum.CustomButton.TabIndex = 1;
+            this.metroTextBoxCharitySum.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBoxCharitySum.CustomButton.UseSelectable = true;
+            this.metroTextBoxCharitySum.CustomButton.Visible = false;
+            this.metroTextBoxCharitySum.Lines = new string[0];
+            this.metroTextBoxCharitySum.Location = new System.Drawing.Point(570, 371);
+            this.metroTextBoxCharitySum.MaxLength = 32767;
+            this.metroTextBoxCharitySum.Name = "metroTextBoxCharitySum";
+            this.metroTextBoxCharitySum.PasswordChar = '\0';
+            this.metroTextBoxCharitySum.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBoxCharitySum.SelectedText = "";
+            this.metroTextBoxCharitySum.SelectionLength = 0;
+            this.metroTextBoxCharitySum.SelectionStart = 0;
+            this.metroTextBoxCharitySum.ShortcutsEnabled = true;
+            this.metroTextBoxCharitySum.Size = new System.Drawing.Size(100, 29);
+            this.metroTextBoxCharitySum.TabIndex = 73;
+            this.metroTextBoxCharitySum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroTextBoxCharitySum.UseSelectable = true;
+            this.metroTextBoxCharitySum.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBoxCharitySum.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBoxCharitySum.TextChanged += new System.EventHandler(this.metroTextBoxCharitySum_TextChanged);
+            this.metroTextBoxCharitySum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBoxCharitySum_KeyPress);
+            // 
+            // metroButtonMinus
+            // 
+            this.metroButtonMinus.BackgroundImage = global::Marathon.Properties.Resources.icons8_subtract_90;
+            this.metroButtonMinus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroButtonMinus.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButtonMinus.Location = new System.Drawing.Point(504, 371);
+            this.metroButtonMinus.Name = "metroButtonMinus";
+            this.metroButtonMinus.Size = new System.Drawing.Size(60, 29);
+            this.metroButtonMinus.TabIndex = 77;
+            this.metroButtonMinus.UseSelectable = true;
+            // 
+            // metroButtonPlus
+            // 
+            this.metroButtonPlus.BackgroundImage = global::Marathon.Properties.Resources.icons8_plus_math_90;
+            this.metroButtonPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroButtonPlus.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButtonPlus.Location = new System.Drawing.Point(676, 371);
+            this.metroButtonPlus.Name = "metroButtonPlus";
+            this.metroButtonPlus.Size = new System.Drawing.Size(60, 29);
+            this.metroButtonPlus.TabIndex = 78;
+            this.metroButtonPlus.UseSelectable = true;
+            this.metroButtonPlus.Click += new System.EventHandler(this.metroButtonPlus_Click);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackgroundImage = global::Marathon.Properties.Resources.help_info;
+            this.metroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButton1.Location = new System.Drawing.Point(723, 146);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(27, 26);
+            this.metroButton1.TabIndex = 68;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
+            // 
             // AddSponsors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 418);
+            this.ClientSize = new System.Drawing.Size(800, 465);
+            this.Controls.Add(this.labelBigNums);
+            this.Controls.Add(this.metroButtonMinus);
+            this.Controls.Add(this.metroButtonPlus);
+            this.Controls.Add(this.metroLabelCharityName);
+            this.Controls.Add(this.metroLabelSumInfo);
+            this.Controls.Add(this.metroLabelCharity);
+            this.Controls.Add(this.metroTextBoxCharitySum);
             this.Controls.Add(this.metroComboBoxRunner);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
@@ -392,5 +506,12 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox metroTextBox5;
         private MetroFramework.Controls.MetroLabel metroLabel7;
+        private System.Windows.Forms.Label labelBigNums;
+        private MetroFramework.Controls.MetroButton metroButtonMinus;
+        private MetroFramework.Controls.MetroButton metroButtonPlus;
+        private MetroFramework.Controls.MetroLabel metroLabelCharityName;
+        private MetroFramework.Controls.MetroLabel metroLabelSumInfo;
+        private MetroFramework.Controls.MetroLabel metroLabelCharity;
+        private MetroFramework.Controls.MetroTextBox metroTextBoxCharitySum;
     }
 }

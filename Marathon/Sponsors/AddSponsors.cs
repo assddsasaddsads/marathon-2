@@ -17,12 +17,14 @@ namespace Marathon.Sponsors
     {
         TimeSpan d = new TimeSpan();
         DateTime date = new DateTime(2021, 3, 20);
+        public int a = 0;
         public AddSponsors()
         {
             InitializeComponent();
             this.Resizable = false;
             this.MaximizeBox = false;
             this.ControlBox = false;
+            metroTextBoxCharitySum.Text = "0";
             timer1.Start();
             MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
             connection.Open();
@@ -53,5 +55,39 @@ namespace Marathon.Sponsors
             ci.Show();
         }
 
+        private void metroButtonPlus_Click(object sender, EventArgs e)
+        {
+            if (metroTextBoxCharitySum.Text != "")
+            {
+                a = Convert.ToInt32(metroTextBoxCharitySum.Text);
+                a = a + 10;
+                metroTextBoxCharitySum.Text = Convert.ToString(a);
+            }
+            else
+            {
+                metroTextBoxCharitySum.Text = "0";
+                a = Convert.ToInt32(metroTextBoxCharitySum.Text);
+                a = a + 10;
+                metroTextBoxCharitySum.Text = Convert.ToString(a);
+            }
+        }
+
+        private void metroTextBoxCharitySum_TextChanged(object sender, EventArgs e)
+        {
+            if (metroTextBoxCharitySum.Text != "")
+            {
+                a = Convert.ToInt32(metroTextBoxCharitySum.Text);
+            }
+           
+        }
+
+        private void metroTextBoxCharitySum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if (!Char.IsDigit(number) && number != 8 && number != 44)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

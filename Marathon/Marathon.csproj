@@ -301,6 +301,8 @@
     <Content Include="Resources\football-field.jpg" />
     <Content Include="Resources\ibirapuera-park-lake.jpg" />
     <Content Include="Resources\icon.ico" />
+    <None Include="Resources\icons8-subtract-90.png" />
+    <None Include="Resources\icons8-plus-math-90.png" />
     <Content Include="Resources\information.png" />
     <Content Include="Resources\jaguar.jpg" />
     <Content Include="Resources\map-logo.jpg" />
