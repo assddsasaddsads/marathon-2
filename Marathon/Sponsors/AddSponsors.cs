@@ -18,12 +18,8 @@ namespace Marathon.Sponsors
         TimeSpan d = new TimeSpan();
         DateTime date = new DateTime(2021, 3, 20);
         public int a = 0;
-        public string name;
         public AddSponsors()
         {
-            string role = "R";
-            string runn;
-            string mail;
             InitializeComponent();
             this.Resizable = false;
             this.MaximizeBox = false;
@@ -32,27 +28,15 @@ namespace Marathon.Sponsors
             timer1.Start();
             MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
             connection.Open();
-            MySqlCommand user = new MySqlCommand("SELECT Email, FirstName, LastName FROM user WHERE RoleId =\"" + role + "\"", connection);
-            MySqlDataReader reader = user.ExecuteReader();
-            while (reader.Read())
+            MySqlCommand newcommand = new MySqlCommand("SELECT DISTINCT CountryCode FROM country", connection);
+            MySqlDataReader reader = newcommand.ExecuteReader();
+           /* while (reader.Read())
             {
-                mail = reader.GetString("Email");
-                name = reader.GetString("FirstName");
-                name = name + " " + reader.GetString("LastName");
-            }
+                metroComboBox1.Items.Add(reader.GetString("CountryCode"));
+            }*/
             connection.Close();
-            MySqlConnection connection1 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
-            connection1.Open();
-            MySqlCommand run = new MySqlCommand("SELECT RunnerId, Email, CountryCode FROM runner", connection1);
-            MySqlDataReader readerrun = run.ExecuteReader();
-            while (readerrun.Read())
-            {
-                runn = readerrun.GetString("RunnerId") + " " + reader.GetString("CountryCode");
-                name = name + runn;
-            }
-            metroComboBoxRunner.Items.Add(name);
-            connection1.Close();
-
+            /*metroComboBox1.Text = "RUS";
+            metroComboBox2.Text = "Бегун";*/
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -103,23 +87,6 @@ namespace Marathon.Sponsors
             if (!Char.IsDigit(number) && number != 8 && number != 44)
             {
                 e.Handled = true;
-            }
-        }
-
-        private void metroButtonMinus_Click(object sender, EventArgs e)
-        {
-            a = Convert.ToInt32(metroTextBoxCharitySum.Text);
-            if (metroTextBoxCharitySum.Text != "" && a > 9)
-            {
-                a = a - 10;
-                metroTextBoxCharitySum.Text = Convert.ToString(a);
-            }
-            else
-            {
-                metroTextBoxCharitySum.Text = "10";
-                a = Convert.ToInt32(metroTextBoxCharitySum.Text);
-                a = a - 10;
-                metroTextBoxCharitySum.Text = Convert.ToString(a);
             }
         }
     }

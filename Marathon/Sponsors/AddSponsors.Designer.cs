@@ -423,7 +423,6 @@
             this.metroButtonMinus.Size = new System.Drawing.Size(60, 29);
             this.metroButtonMinus.TabIndex = 77;
             this.metroButtonMinus.UseSelectable = true;
-            this.metroButtonMinus.Click += new System.EventHandler(this.metroButtonMinus_Click);
             // 
             // metroButtonPlus
             // 
