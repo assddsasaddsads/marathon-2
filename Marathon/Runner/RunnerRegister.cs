@@ -144,5 +144,10 @@ namespace Marathon.Runner
                 e.Handled = true;
             }
         }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+            //34242344234
+        }
     }
 }
