@@ -60,5 +60,5 @@ namespace Marathon.Runner
             Runner.Contacs ct = new Contacs();
             ct.Show();
         }
-    }//SeregaPiDor!1
+    }
 }

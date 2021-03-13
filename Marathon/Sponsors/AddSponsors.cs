@@ -92,8 +92,9 @@ namespace Marathon.Sponsors
             if (metroTextBoxCharitySum.Text != "")
             {
                 a = Convert.ToInt32(metroTextBoxCharitySum.Text);
+                labelBigNums.Text = metroTextBoxCharitySum.Text;
             }
-           
+            
         }
 
         private void metroTextBoxCharitySum_KeyPress(object sender, KeyPressEventArgs e)

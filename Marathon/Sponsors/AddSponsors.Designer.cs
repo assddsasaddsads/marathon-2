@@ -341,9 +341,9 @@
             this.labelBigNums.BackColor = System.Drawing.Color.White;
             this.labelBigNums.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBigNums.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labelBigNums.Location = new System.Drawing.Point(520, 251);
+            this.labelBigNums.Location = new System.Drawing.Point(441, 251);
             this.labelBigNums.Name = "labelBigNums";
-            this.labelBigNums.Size = new System.Drawing.Size(211, 115);
+            this.labelBigNums.Size = new System.Drawing.Size(351, 115);
             this.labelBigNums.TabIndex = 79;
             this.labelBigNums.Text = "50";
             this.labelBigNums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
