@@ -139,6 +139,7 @@
             this.metroComboBoxRunner.Size = new System.Drawing.Size(253, 29);
             this.metroComboBoxRunner.TabIndex = 71;
             this.metroComboBoxRunner.UseSelectable = true;
+            this.metroComboBoxRunner.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxRunner_SelectedIndexChanged);
             // 
             // metroLabel3
             // 
@@ -351,6 +352,7 @@
             // metroLabelCharityName
             // 
             this.metroLabelCharityName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabelCharityName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.metroLabelCharityName.Location = new System.Drawing.Point(497, 172);
             this.metroLabelCharityName.Name = "metroLabelCharityName";
             this.metroLabelCharityName.Size = new System.Drawing.Size(220, 29);

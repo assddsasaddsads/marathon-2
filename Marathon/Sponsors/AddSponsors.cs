@@ -19,39 +19,56 @@ namespace Marathon.Sponsors
         DateTime date = new DateTime(2021, 3, 20);
         public int a = 0;
         public string name;
+        public string Id;
+        public string Sum;
+        public int idrun,charity;
         public AddSponsors()
         {
             string role = "R";
-            string runn;
-            string mail;
             InitializeComponent();
             this.Resizable = false;
             this.MaximizeBox = false;
             this.ControlBox = false;
             metroTextBoxCharitySum.Text = "0";
             timer1.Start();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
-            connection.Open();
-            MySqlCommand user = new MySqlCommand("SELECT Email, FirstName, LastName FROM user WHERE RoleId =\"" + role + "\"", connection);
-            MySqlDataReader reader = user.ExecuteReader();
-            while (reader.Read())
+            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            MySqlConnection connection1 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            MySqlConnection connection2 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            MySqlConnection connection3 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            connection.Open();//необходимая команда MySql
+            connection1.Open();//необходимая команда MySql
+            connection2.Open();//необходимая команда MySql
+            connection3.Open();//необходимая команда MySql
+            MySqlCommand user = new MySqlCommand("SELECT FirstName, LastName FROM user WHERE RoleId =\"" + role + "\"  ", connection);//вытаскиваем имена по RoleId = R 
+            MySqlDataReader reader = user.ExecuteReader();//команда для выборки данных из таблицы сonnection
+            MySqlCommand runner = new MySqlCommand("SELECT RunnerId, CountryCode FROM runner", connection1);//вытаскиваем RunnerId и CountryCode
+            MySqlDataReader runnerreader = runner.ExecuteReader();//команда для выборки данных из таблицы сonnection1
+
+            while (reader.Read()&& runnerreader.Read())
             {
-                mail = reader.GetString("Email");
-                name = reader.GetString("FirstName");
-                name = name + " " + reader.GetString("LastName");
+                name = reader.GetString("FirstName") + " " + reader.GetString("LastName") ;//name становится именем и фамилией бегуна 
+                Id = runnerreader.GetString("RunnerId") + " " + runnerreader.GetString("CountryCode");//Id становится RunnerId и CountryCode-ом
+                Sum = name + " " + Id;//склеиваем их
+                metroComboBoxRunner.Items.Add(Sum);//добавляем склейку в комбобокс
             }
-            connection.Close();
-            /*MySqlConnection connection1 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
-            connection1.Open();
-            MySqlCommand run = new MySqlCommand("SELECT RunnerId, Email, CountryCode FROM runner", connection1);
-            MySqlDataReader readerrun = run.ExecuteReader();
-            /* while (readerrun.Read())
-             {
-                 runn = readerrun.GetString("RunnerId") + " " + reader.GetString("CountryCode");
-                 name = name + runn;
-             }*/
-            metroComboBoxRunner.Items.Add(name);
-            //connection1.Close();
+            connection.Close();//необходимая команда MySql
+            connection1.Close();//необходимая команда MySql
+            //мы еще сами пока не поняли
+            MySqlCommand runner2 = new MySqlCommand("SELECT CharityId FROM registration WHERE RunnerId =\"" + idrun + "\"  ", connection2);
+            MySqlDataReader runnerreader2 = runner2.ExecuteReader();
+            while (runnerreader2.Read())
+            {
+                charity = Convert.ToInt32(runnerreader2.GetString("CharityId"));
+            }
+            MySqlCommand chart = new MySqlCommand("SELECT CharityName FROM charity WHERE CharityId =\"" + charity + "\"  ", connection3);
+            MySqlDataReader chartreader = chart.ExecuteReader();
+            while (chartreader.Read())
+            {
+                metroLabelCharityName.Text = chartreader.GetString("CharityName");
+            }
+            
+            connection2.Close();//необходимая команда MySql
+            connection3.Close();//необходимая команда MySql
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -92,7 +109,7 @@ namespace Marathon.Sponsors
             if (metroTextBoxCharitySum.Text != "")
             {
                 a = Convert.ToInt32(metroTextBoxCharitySum.Text);
-                labelBigNums.Text = metroTextBoxCharitySum.Text;
+                labelBigNums.Text ="$" + metroTextBoxCharitySum.Text;
             }
             
         }
@@ -121,6 +138,19 @@ namespace Marathon.Sponsors
                 a = a - 10;
                 metroTextBoxCharitySum.Text = Convert.ToString(a);
             }
+        }
+
+        private void metroComboBoxRunner_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlConnection connection1 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            connection1.Open();
+            MySqlCommand runner = new MySqlCommand("SELECT RunnerId, Email, CountryCode FROM runner", connection1);
+            MySqlDataReader runnerreader = runner.ExecuteReader();
+            while (runnerreader.Read())
+            {
+                idrun = Convert.ToInt32(runnerreader.GetString("RunnerId"));
+            }
+            connection1.Close();
         }
     }
 }
