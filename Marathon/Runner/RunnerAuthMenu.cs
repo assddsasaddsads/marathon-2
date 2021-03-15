@@ -54,5 +54,11 @@ namespace Marathon.Runner
             Runner.RunnerSponsors rs = new RunnerSponsors(login);
             rs.Show();
         }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            Runner.Contacs ct = new Contacs();
+            ct.Show();
+        }
     }
 }

@@ -139,6 +139,7 @@
             this.metroComboBoxRunner.Size = new System.Drawing.Size(253, 29);
             this.metroComboBoxRunner.TabIndex = 71;
             this.metroComboBoxRunner.UseSelectable = true;
+            this.metroComboBoxRunner.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxRunner_SelectedIndexChanged);
             // 
             // metroLabel3
             // 
@@ -341,9 +342,9 @@
             this.labelBigNums.BackColor = System.Drawing.Color.White;
             this.labelBigNums.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBigNums.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.labelBigNums.Location = new System.Drawing.Point(520, 251);
+            this.labelBigNums.Location = new System.Drawing.Point(441, 251);
             this.labelBigNums.Name = "labelBigNums";
-            this.labelBigNums.Size = new System.Drawing.Size(211, 115);
+            this.labelBigNums.Size = new System.Drawing.Size(351, 115);
             this.labelBigNums.TabIndex = 79;
             this.labelBigNums.Text = "50";
             this.labelBigNums.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,11 +352,12 @@
             // metroLabelCharityName
             // 
             this.metroLabelCharityName.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabelCharityName.Location = new System.Drawing.Point(497, 172);
+            this.metroLabelCharityName.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.metroLabelCharityName.Location = new System.Drawing.Point(442, 172);
             this.metroLabelCharityName.Name = "metroLabelCharityName";
-            this.metroLabelCharityName.Size = new System.Drawing.Size(220, 29);
+            this.metroLabelCharityName.Size = new System.Drawing.Size(350, 29);
             this.metroLabelCharityName.TabIndex = 74;
-            this.metroLabelCharityName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroLabelCharityName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabelSumInfo
             // 
@@ -423,6 +425,7 @@
             this.metroButtonMinus.Size = new System.Drawing.Size(60, 29);
             this.metroButtonMinus.TabIndex = 77;
             this.metroButtonMinus.UseSelectable = true;
+            this.metroButtonMinus.Click += new System.EventHandler(this.metroButtonMinus_Click);
             // 
             // metroButtonPlus
             // 
