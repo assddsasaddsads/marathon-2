@@ -70,3 +70,39 @@ C:\Users\Роман\Downloads\УП\marathon.klin-master\Marathon\obj\Debug\Marat
 C:\Users\Роман\Downloads\УП\marathon.klin-master\Marathon\obj\Debug\Marathon.csproj.CopyComplete
 C:\Users\Роман\Downloads\УП\marathon.klin-master\Marathon\obj\Debug\Marathon.exe
 C:\Users\Роман\Downloads\УП\marathon.klin-master\Marathon\obj\Debug\Marathon.pdb
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\bin\Debug\Marathon.exe
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\bin\Debug\Marathon.pdb
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\bin\Debug\MetroFramework.Design.dll
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\bin\Debug\MetroFramework.dll
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\bin\Debug\MySql.Data.dll
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.csprojAssemblyReference.cache
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Admin.AddUser.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Admin.AdminMenu.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Admin.EditUser.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Coordinator.EditRunner.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Coordinator.Menu.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.AboutEvent.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.BMICalc.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.BMRCalc.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.Charity.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.Checkpoints.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.EventMenu.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.HowLong.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Event.InteractiveMap.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Login.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerAuthMenu.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerEditProfile.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerEventRegister.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerMenu.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerRegister.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerSponsors.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Sponsors.AddSponsors.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Sponsors.CharityInfo.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.StartScreen.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.Properties.Resources.resources
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.csproj.GenerateResource.cache
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.csproj.CopyComplete
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.exe
+C:\Users\Александр\Desktop\Новая папка\marathon\Marathon\obj\Debug\Marathon.pdb

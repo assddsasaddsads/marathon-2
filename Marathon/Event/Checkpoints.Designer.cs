@@ -33,13 +33,16 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.metroLabel7);
             this.metroPanel1.Controls.Add(this.metroLabel6);
             this.metroPanel1.Controls.Add(this.metroLabel5);
             this.metroPanel1.Controls.Add(this.metroLabel4);
@@ -47,9 +50,9 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 99);
+            this.metroPanel1.Location = new System.Drawing.Point(23, 109);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(167, 216);
+            this.metroPanel1.Size = new System.Drawing.Size(167, 225);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -82,15 +85,6 @@
             this.metroLabel4.TabIndex = 4;
             this.metroLabel4.Text = "metroLabel4";
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 60);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(74, 19);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Checkpoint";
-            // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
@@ -100,11 +94,40 @@
             this.metroLabel3.TabIndex = 3;
             this.metroLabel3.Text = "metroLabel3";
             // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(71, 163);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel7.TabIndex = 7;
+            this.metroLabel7.Text = "metroLabel7";
+            this.metroLabel7.Click += new System.EventHandler(this.metroLabel7_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 60);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "Checkpoint";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(23, 87);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel8.TabIndex = 8;
+            this.metroLabel8.Text = "metroLabel8";
+            // 
             // Checkpoints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(253, 338);
+            this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -125,8 +148,10 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
     }
 }

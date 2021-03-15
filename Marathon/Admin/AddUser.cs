@@ -41,8 +41,7 @@ namespace Marathon.Admin
             d = date - DateTime.Now;
             metroLabel1.Text = "До начала марафона осталось: " + d.Days + " д. " + d.Hours + " ч. " + d.Minutes + " мин. " + d.Seconds + " с. ";
         }
-
-        private void metroButton1_Click(object sender, EventArgs e)
+            private void metroButton1_Click(object sender, EventArgs e)
         {
             if (metroTextBox2.Text == metroTextBox3.Text)
             {
@@ -114,6 +113,7 @@ namespace Marathon.Admin
             {
                 MetroMessageBox.Show(this, "Введенные пароли не совпдаюат!");
             }
+          
         }
 
         private void metroButton2_Click(object sender, EventArgs e)

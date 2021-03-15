@@ -45,7 +45,7 @@ namespace Marathon.Runner
         private void metroButton2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        } 
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
@@ -85,6 +85,15 @@ namespace Marathon.Runner
             {
                 MetroMessageBox.Show(this, "Введенные пароли не совпдаюат!");
             }
+            
+        }
+        private void RunnerEditProfile_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void metroDateTime1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -75,7 +75,7 @@ namespace Marathon
                         this.Close();
                         connection.Close();
                     }
-                }
+            }
                 else
                     MetroMessageBox.Show(this, "Неверный логин или пароль");
             }
