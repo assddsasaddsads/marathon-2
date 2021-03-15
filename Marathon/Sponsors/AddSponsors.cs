@@ -21,7 +21,7 @@ namespace Marathon.Sponsors
         public string name;
         public string Id,Id2;
         public string Sum;
-        public int value,charity;
+        public static int value,charity;
         public AddSponsors()
         {
             string role = "R";
@@ -126,7 +126,6 @@ namespace Marathon.Sponsors
             metroLabelCharityName.Text = metroComboBoxRunner.SelectedItem.ToString();
             string a = metroComboBoxRunner.SelectedItem.ToString();
             int.TryParse(string.Join("", a.Where(c => char.IsDigit(c))), out value);
-            label1.Text = value.ToString();
             MySqlConnection connection2 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
             MySqlConnection connection3 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
             connection2.Open();//необходимая команда MySql
@@ -146,15 +145,6 @@ namespace Marathon.Sponsors
 
             connection2.Close();//необходимая команда MySql
             connection3.Close();//необходимая команда MySql
-            /* MySqlConnection connection1 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
-             connection1.Open();
-             MySqlCommand runner = new MySqlCommand("SELECT RunnerId, Email, CountryCode FROM runner", connection1);
-             MySqlDataReader runnerreader = runner.ExecuteReader();
-             while (runnerreader.Read())
-             {
-                idrun = Convert.ToInt32(runnerreader.GetString("RunnerId"));
-             }
-             connection1.Close();*/
         }
     }
 }

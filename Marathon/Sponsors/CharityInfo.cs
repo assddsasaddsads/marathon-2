@@ -17,16 +17,15 @@ namespace Marathon.Sponsors
         public CharityInfo()
         {
             InitializeComponent();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
-            connection.Open();
-            string sql = "SELECT CharityName FROM charity WHERE CharityId = 2";
-            MySqlCommand command = new MySqlCommand(sql, connection);
-            string name = command.ExecuteScalar().ToString();
-            label1.Text = name;
-            sql = "SELECT CharityDescription FROM charity WHERE CharityId = 2";
-            MySqlCommand com = new MySqlCommand(sql, connection);
-            string description = com.ExecuteScalar().ToString();
-            label2.Text = description;
+            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            connection.Open();//необходимая команда MySql
+            MySqlCommand chart = new MySqlCommand("SELECT CharityName, CharityDescription FROM charity WHERE CharityId =\"" + AddSponsors.charity + "\"  ", connection);
+            MySqlDataReader chartreader = chart.ExecuteReader();
+            while (chartreader.Read())
+            {
+                metroLabel1.Text = chartreader.GetString("CharityName");
+                metroLabel2.Text = chartreader.GetString("CharityDescription");
+            }
             connection.Close();
         }
     }

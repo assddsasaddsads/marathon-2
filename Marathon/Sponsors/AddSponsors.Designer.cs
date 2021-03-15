@@ -54,7 +54,6 @@
             this.metroButtonMinus = new MetroFramework.Controls.MetroButton();
             this.metroButtonPlus = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // metroButton2
@@ -452,21 +451,11 @@
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(389, 386);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 80;
-            this.label1.Text = "label1";
-            // 
             // AddSponsors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 465);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelBigNums);
             this.Controls.Add(this.metroButtonMinus);
             this.Controls.Add(this.metroButtonPlus);
@@ -527,6 +516,5 @@
         private MetroFramework.Controls.MetroLabel metroLabelSumInfo;
         private MetroFramework.Controls.MetroLabel metroLabelCharity;
         private MetroFramework.Controls.MetroTextBox metroTextBoxCharitySum;
-        private System.Windows.Forms.Label label1;
     }
 }
