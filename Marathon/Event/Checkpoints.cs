@@ -66,17 +66,16 @@ namespace Marathon.Event
             switch (number)
             {
                 case 1:
-
                     this.Text = "Checkpoint 1";
-
+                    metroLabel8.Text = "Services Provided: ";
                     metroLabel1.Text = "Avenida Rudge";
                     metroLabel3.Text = "Drinks";
                     metroLabel4.Text = "Energy Bars";
                     metroLabel5.Text = "";
                     metroLabel6.Text = "";
+                    metroLabel7.Text = "";
                     logos[0].Location = new Point(0, 0);
                     metroPanel1.Controls.Add(logos[0]);
-
 
                     logos[1].Location = new Point(0, logos[0].Location.Y + 46);
                     metroPanel1.Controls.Add(logos[1]);
@@ -92,6 +91,8 @@ namespace Marathon.Event
                     metroLabel4.Text = "Energy Bars";
                     metroLabel5.Text = "Toilets";
                     metroLabel6.Text = "Information";
+                    metroLabel7.Text = "Medical";
+                    metroLabel8.Text = "Services Provided: ";
                     logos[0].Location = new Point(0, 0);
                     metroPanel1.Controls.Add(logos[0]);
 
@@ -108,11 +109,15 @@ namespace Marathon.Event
                     logos[4].Location = new Point(0, logos[2].Location.Y + 46);
                     metroPanel1.Controls.Add(logos[4]);
 
+                    logos[4].Location = new Point(0, logos[4].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[4]);
+
 
                     metroLabel3.Location = new Point(46, 10);
                     metroLabel4.Location = new Point(46, logos[1].Location.Y + 12);
                     metroLabel5.Location = new Point(46, logos[2].Location.Y + 12);
                     metroLabel6.Location = new Point(46, logos[3].Location.Y + 12);
+                    metroLabel7.Location = new Point(46, logos[4].Location.Y + 12);
                     break;
 
                 case 3:
@@ -120,8 +125,10 @@ namespace Marathon.Event
                     metroLabel1.Text = "Parque do Ibirapuera";
                     metroLabel3.Text = "Drinks";
                     metroLabel4.Text = "Energy Bars";
-                    metroLabel5.Text = "Medical";
+                    metroLabel5.Text = "Toilets";
                     metroLabel6.Text = "";
+                    metroLabel7.Text = "";
+                    metroLabel8.Text = "Services Provided: ";
 
 
                     logos[0].Location = new Point(0, 0);
@@ -130,14 +137,13 @@ namespace Marathon.Event
                     logos[1].Location = new Point(0, logos[0].Location.Y + 46);
                     metroPanel1.Controls.Add(logos[1]);
 
-                    logos[4].Location = new Point(0, logos[1].Location.Y + 46);
-                    metroPanel1.Controls.Add(logos[4]);
+                    logos[2].Location = new Point(0, logos[1].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[2]);
 
 
                     metroLabel3.Location = new Point(46, 5);
                     metroLabel4.Location = new Point(46, logos[1].Location.Y + 12);
-                    metroLabel5.Location = new Point(46, logos[4].Location.Y + 12);
-                    metroLabel6.Location = new Point(46, logos[3].Location.Y + 12);
+                    metroLabel5.Location = new Point(46, logos[2].Location.Y + 12);
                     break;
 
                 case 4:
@@ -146,7 +152,9 @@ namespace Marathon.Event
                     metroLabel3.Text = "Drinks";
                     metroLabel4.Text = "Energy Bars";
                     metroLabel5.Text = "Toilets";
+                    metroLabel7.Text = "Medical";
                     metroLabel6.Text = "";
+                    metroLabel8.Text = "Services Provided: ";
 
                     logos[0].Location = new Point(0, 0);
                     metroPanel1.Controls.Add(logos[0]);
@@ -157,19 +165,25 @@ namespace Marathon.Event
                     logos[2].Location = new Point(0, logos[1].Location.Y + 46);
                     metroPanel1.Controls.Add(logos[2]);
 
+                    logos[4].Location = new Point(0, logos[2].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[4]);
 
                     metroLabel3.Location = new Point(46, 5);
                     metroLabel4.Location = new Point(46, logos[1].Location.Y + 12);
                     metroLabel5.Location = new Point(46, logos[2].Location.Y + 12);
                     metroLabel6.Location = new Point(46, logos[3].Location.Y + 12);
+                    metroLabel7.Location = new Point(46, logos[4].Location.Y + 12);
                     break;
+
                 case 5:
-                    this.Text = "Race Start";
-                    metroLabel1.Text = "Samba Full Marathon";
+                    this.Text = "Checkpoint 5";
+                    metroLabel1.Text = "Iguatemi";
                     metroLabel3.Text = "Drinks";
                     metroLabel4.Text = "Energy Bars";
                     metroLabel5.Text = "Toilets";
-                    metroLabel6.Text = "";
+                    metroLabel6.Text = "Information";
+                    metroLabel7.Text = "";
+                    metroLabel8.Text = "Services Provided: ";
 
                     logos[0].Location = new Point(0, 0);
                     metroPanel1.Controls.Add(logos[0]);
@@ -180,19 +194,24 @@ namespace Marathon.Event
                     logos[2].Location = new Point(0, logos[1].Location.Y + 46);
                     metroPanel1.Controls.Add(logos[2]);
 
+                    logos[3].Location = new Point(0, logos[2].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[3]);
 
                     metroLabel3.Location = new Point(46, 5);
                     metroLabel4.Location = new Point(46, logos[1].Location.Y + 12);
                     metroLabel5.Location = new Point(46, logos[2].Location.Y + 12);
                     metroLabel6.Location = new Point(46, logos[3].Location.Y + 12);
                     break;
+
                 case 6:
-                    this.Text = "Race Start";
-                    metroLabel1.Text = "Jongo Half Marathon";
+                    this.Text = "Checkpoint 6";
+                    metroLabel1.Text = "Rua Lisboa";
                     metroLabel3.Text = "Drinks";
                     metroLabel4.Text = "Energy Bars";
                     metroLabel5.Text = "Toilets";
                     metroLabel6.Text = "";
+                    metroLabel7.Text = "";
+                    metroLabel8.Text = "Services Provided: ";
 
                     logos[0].Location = new Point(0, 0);
                     metroPanel1.Controls.Add(logos[0]);
@@ -209,30 +228,122 @@ namespace Marathon.Event
                     metroLabel5.Location = new Point(46, logos[2].Location.Y + 12);
                     metroLabel6.Location = new Point(46, logos[3].Location.Y + 12);
                     break;
+
                 case 7:
-                    this.Text = "Race Start";
-                    metroLabel1.Text = "Capoiera 5km Fun Run";
+                    this.Text = "Checkpoint 7";
+                    metroLabel1.Text = "Cemiterio da Consolacao";
                     metroLabel3.Text = "Drinks";
                     metroLabel4.Text = "Energy Bars";
                     metroLabel5.Text = "Toilets";
-                    metroLabel6.Text = "";
+                    metroLabel6.Text = "Information";
+                    metroLabel7.Text = "Medical";
+                    metroLabel8.Text = "Services Provided: ";
 
                     logos[0].Location = new Point(0, 0);
                     metroPanel1.Controls.Add(logos[0]);
 
-                    logos[1].Location = new Point(0, logos[0].Location.Y + 46);
+
+                    logos[1].Location = new Point(0, logos[4].Location.Y + 46);
                     metroPanel1.Controls.Add(logos[1]);
 
                     logos[2].Location = new Point(0, logos[1].Location.Y + 46);
                     metroPanel1.Controls.Add(logos[2]);
 
+                    logos[3].Location = new Point(0, logos[2].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[3]);
 
-                    metroLabel3.Location = new Point(46, 5);
+                    logos[4].Location = new Point(0, logos[2].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[4]);
+
+                    logos[4].Location = new Point(0, logos[4].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[4]);
+
+
+                    metroLabel3.Location = new Point(46, 10);
                     metroLabel4.Location = new Point(46, logos[1].Location.Y + 12);
                     metroLabel5.Location = new Point(46, logos[2].Location.Y + 12);
                     metroLabel6.Location = new Point(46, logos[3].Location.Y + 12);
+                    metroLabel7.Location = new Point(46, logos[4].Location.Y + 12);
+                    break;
+
+                case 8:
+                    this.Text = "Checkpoint 8";
+                    metroLabel1.Text = "Cemiterio da Consolacao";
+                    metroLabel3.Text = "Drinks";
+                    metroLabel4.Text = "Energy Bars";
+                    metroLabel5.Text = "Toilets";
+                    metroLabel6.Text = "Information";
+                    metroLabel7.Text = "Medical";
+                    metroLabel8.Text = "Services Provided: ";
+
+                    logos[0].Location = new Point(0, 0);
+                    metroPanel1.Controls.Add(logos[0]);
+
+
+                    logos[1].Location = new Point(0, logos[4].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[1]);
+
+                    logos[2].Location = new Point(0, logos[1].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[2]);
+
+                    logos[3].Location = new Point(0, logos[2].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[3]);
+
+                    logos[4].Location = new Point(0, logos[2].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[4]);
+
+                    logos[4].Location = new Point(0, logos[4].Location.Y + 46);
+                    metroPanel1.Controls.Add(logos[4]);
+
+
+                    metroLabel3.Location = new Point(46, 10);
+                    metroLabel4.Location = new Point(46, logos[1].Location.Y + 12);
+                    metroLabel5.Location = new Point(46, logos[2].Location.Y + 12);
+                    metroLabel6.Location = new Point(46, logos[3].Location.Y + 12);
+                    metroLabel7.Location = new Point(46, logos[4].Location.Y + 12);
+                    break;
+
+                case 9:
+                    this.Text = "Race Start";
+
+                    metroLabel1.Text = "Samba Full Marathon";
+                    metroLabel3.Text = "";
+                    metroLabel4.Text = "";
+                    metroLabel5.Text = "";
+                    metroLabel6.Text = "";
+                    metroLabel7.Text = "";
+                    metroLabel8.Text = "";
+                    break;
+
+                case 10:
+                    this.Text = "Race Start";
+
+                    metroLabel1.Text = "Jongo Half Marathon";
+                    metroLabel3.Text = "";
+                    metroLabel4.Text = "";
+                    metroLabel5.Text = "";
+                    metroLabel6.Text = "";
+                    metroLabel7.Text = "";
+                    metroLabel8.Text = "";
+                    break;
+
+                case 11:
+                    this.Text = "Race Start";
+
+                    metroLabel1.Text = "Capoeira 5km Fun Run";
+                    metroLabel3.Text = "";
+                    metroLabel4.Text = "";
+                    metroLabel5.Text = "";
+                    metroLabel6.Text = "";
+                    metroLabel7.Text = "";
+                    metroLabel8.Text = "";
                     break;
             }
+        }
+
+        private void metroLabel7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -94,8 +94,39 @@ namespace Marathon.Event
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            
+            Form f1 = Application.OpenForms["Checkpoints"];
+            if (f1 != null)
+                f1.Close();
+            Form f = new Checkpoints(8);
+            f.Show();
         }
-      }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Form f1 = Application.OpenForms["Checkpoints"];
+            if (f1 != null)
+                f1.Close();
+            Form f = new Checkpoints(9);
+            f.Show();
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            Form f1 = Application.OpenForms["Checkpoints"];
+            if (f1 != null)
+                f1.Close();
+            Form f = new Checkpoints(10);
+            f.Show();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            Form f1 = Application.OpenForms["Checkpoints"];
+            if (f1 != null)
+                f1.Close();
+            Form f = new Checkpoints(11);
+            f.Show();
+        }
+    }
 }
 
