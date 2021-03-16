@@ -144,3 +144,41 @@ C:\Users\karai\OneDrive\Рабочий стол\code\marathon\Marathon\obj\Debug
 C:\Users\karai\OneDrive\Рабочий стол\code\marathon\Marathon\obj\Debug\Marathon.exe
 C:\Users\karai\OneDrive\Рабочий стол\code\marathon\Marathon\obj\Debug\Marathon.pdb
 C:\Users\karai\OneDrive\Рабочий стол\code\marathon\Marathon\bin\Debug\Marathon.exe.config
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\bin\Debug\Marathon.exe.config
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\bin\Debug\Marathon.exe
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\bin\Debug\Marathon.pdb
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\bin\Debug\MetroFramework.Design.dll
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\bin\Debug\MetroFramework.dll
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\bin\Debug\MySql.Data.dll
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.csprojAssemblyReference.cache
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Admin.AddUser.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Admin.AdminMenu.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Admin.EditUser.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Coordinator.EditRunner.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Coordinator.Menu.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.AboutEvent.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.BMICalc.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.BMRCalc.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.Charity.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.Checkpoints.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.EventMenu.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.HowLong.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Event.InteractiveMap.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Login.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Runner.Contacs.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerAuthMenu.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerEditProfile.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerEventRegister.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerMenu.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerRegister.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Runner.RunnerSponsors.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Sponsors.AddSponsors.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Sponsors.CharityInfo.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.StartScreen.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.Properties.Resources.resources
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.csproj.GenerateResource.cache
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.csproj.CoreCompileInputs.cache
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.csproj.CopyComplete
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.exe
+C:\Users\Nikit\Desktop\Новая папка (3)\marathon\Marathon\obj\Debug\Marathon.pdb

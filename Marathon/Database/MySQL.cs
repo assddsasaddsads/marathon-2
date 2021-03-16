@@ -9,6 +9,7 @@ namespace Marathon.Database
 {
     public class MySQL
     {
-       static public MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+       
+       static public string connectionUrl =  "server=localhost;database=marathon;user=root;password=lox123";
     }
 }

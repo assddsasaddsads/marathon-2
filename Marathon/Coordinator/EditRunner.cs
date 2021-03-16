@@ -26,7 +26,7 @@ namespace Marathon.Coordinator
             this.MaximizeBox = false;
             timer1.Start();
             email = index;
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             byte regStatus = 0;
             try
                {
@@ -96,7 +96,7 @@ namespace Marathon.Coordinator
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             try
             {
                 connection.Open();

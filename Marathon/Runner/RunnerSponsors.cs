@@ -26,7 +26,7 @@ namespace Marathon.Runner
             metroGrid1.ReadOnly = true;
             metroGrid1.BackgroundColor = Color.WhiteSmoke;
             metroGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(102, 102, 102);
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             try
             {
                 connection.Open();

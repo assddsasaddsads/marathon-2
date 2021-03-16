@@ -19,7 +19,7 @@ namespace Marathon.Coordinator
     {
         TimeSpan d = new TimeSpan();
         DateTime date = new DateTime(2021, 3, 20);
-        MySqlConnection connection = MySQL.connection;
+        MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
         public Menu()
         {
             InitializeComponent();
@@ -211,7 +211,7 @@ namespace Marathon.Coordinator
         {
             try
             {
-                MySqlConnection connection = MySQL.connection;
+                MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
                 connection.Open();
                 MySqlDataAdapter da = new MySqlDataAdapter("select distinct User.Email, User.FirstName, User.LastName, Registration.RegistrationStatusId from User, Runner, Registration where Registration.RunnerId = Runner.RunnerId and Runner.Email = User.Email", connection);
                 DataSet DS = new DataSet();

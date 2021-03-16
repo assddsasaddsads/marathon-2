@@ -18,7 +18,7 @@ namespace Marathon.Sponsors
         public CharityInfo()
         {
             InitializeComponent();
-            MySqlConnection connection = MySQL.connection;//необходимая команда MySql
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);//необходимая команда MySql
             connection.Open();//необходимая команда MySql
             MySqlCommand chart = new MySqlCommand("SELECT CharityName, CharityDescription FROM charity WHERE CharityId =\"" + AddSponsors.charity + "\"  ", connection);
             MySqlDataReader chartreader = chart.ExecuteReader();

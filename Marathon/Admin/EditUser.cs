@@ -24,7 +24,7 @@ namespace Marathon.Admin
             this.MaximizeBox = false;
             this.ControlBox = false;
             timer1.Start();
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             connection.Open();
             MySqlCommand newcommand = new MySqlCommand("SELECT DISTINCT CountryCode FROM country", connection);
             MySqlDataReader reader = newcommand.ExecuteReader();
@@ -54,7 +54,7 @@ namespace Marathon.Admin
             if (metroTextBox2.Text == metroTextBox3.Text)
             {
                 string role;
-                MySqlConnection connection = MySQL.connection;
+                MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
                 connection.Open();
                 if (metroComboBox2.SelectedIndex == 0)
                 {

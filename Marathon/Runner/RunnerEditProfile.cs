@@ -26,7 +26,7 @@ namespace Marathon.Runner
             this.MaximizeBox = false;
             this.ControlBox = false;
             timer1.Start();
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             connection.Open();
             MySqlCommand newcommand = new MySqlCommand("SELECT DISTINCT CountryCode FROM country", connection);
             MySqlDataReader reader = newcommand.ExecuteReader();
@@ -59,7 +59,7 @@ namespace Marathon.Runner
                     {
                         if (metroTextBox2.Text == metroTextBox3.Text)
                         {
-                            MySqlConnection connection = MySQL.connection;
+                            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
                             connection.Open();
                             MySqlCommand command = new MySqlCommand("UPDATE user SET Password = @password, FirstName = @firstname, LastName = @lastname WHERE Email = @login", connection);
                             command.Parameters.AddWithValue("@login", login);

@@ -25,7 +25,7 @@ namespace Marathon.Admin
             metroGrid1.ReadOnly = true;
             metroGrid1.BackgroundColor = Color.WhiteSmoke;
             metroGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(102, 102, 102);
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             try
             {
                 connection.Open();
@@ -57,7 +57,7 @@ namespace Marathon.Admin
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             try
             {
                 string role = "A";
@@ -85,7 +85,7 @@ namespace Marathon.Admin
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = MySQL.connection;
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             try
             {
                 connection.Open();

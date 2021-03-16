@@ -32,8 +32,8 @@ namespace Marathon.Sponsors
             this.ControlBox = false;
             metroTextBoxCharitySum.Text = "0";
             timer1.Start();
-            MySqlConnection connection = MySQL.connection;//необходимая команда MySql
-            MySqlConnection connection1 = MySQL.connection;//необходимая команда MySql
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);//необходимая команда MySql
+            MySqlConnection connection1 = new MySqlConnection(MySQL.connectionUrl);//необходимая команда MySql
             connection.Open();//необходимая команда MySql
             connection1.Open();//необходимая команда MySql
            
@@ -127,8 +127,8 @@ namespace Marathon.Sponsors
             metroLabelCharityName.Text = metroComboBoxRunner.SelectedItem.ToString();
             string a = metroComboBoxRunner.SelectedItem.ToString();
             int.TryParse(string.Join("", a.Where(c => char.IsDigit(c))), out value);
-            MySqlConnection connection2 = MySQL.connection;//необходимая команда MySql
-            MySqlConnection connection3 = MySQL.connection;//необходимая команда MySql
+            MySqlConnection connection2 = new MySqlConnection(MySQL.connectionUrl);//необходимая команда MySql
+            MySqlConnection connection3 = new MySqlConnection(MySQL.connectionUrl);//необходимая команда MySql
             connection2.Open();//необходимая команда MySql
             connection3.Open();//необходимая команда MySql
             MySqlCommand runner2 = new MySqlCommand("SELECT CharityId FROM registration WHERE RunnerId =\"" + value + "\"  ", connection2);
