@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
+using Marathon.Database;
 
 namespace Marathon.Runner
 {
@@ -24,7 +26,7 @@ namespace Marathon.Runner
             this.MaximizeBox = false;
             this.ControlBox = false;
             timer1.Start();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = MySQL.connection;
             connection.Open();
             MySqlCommand newcommand = new MySqlCommand("SELECT DISTINCT CountryCode FROM country", connection);
             MySqlDataReader reader = newcommand.ExecuteReader();
@@ -51,7 +53,7 @@ namespace Marathon.Runner
                     {
                         if (metroTextBox2.Text == metroTextBox3.Text)
                         {
-                            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+                            MySqlConnection connection = MySQL.connection;
                             connection.Open();
                             MySqlCommand command = new MySqlCommand("INSERT INTO user (Email, Password, FirstName, LastName, RoleId) VALUES (@login, @password, @firstname, @lastname, @role)", connection);
                             command.Parameters.AddWithValue("@login", metroTextBox1.Text);
@@ -149,6 +151,18 @@ namespace Marathon.Runner
         {
             //34242344234
             //43242342352323
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                var bit = new Bitmap(ofd.FileName);
+                pictureBox1.Image = bit;
+
+            }
         }
     }
 }

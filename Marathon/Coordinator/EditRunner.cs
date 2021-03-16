@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using MetroFramework.Forms;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Marathon.Database;
 
 namespace Marathon.Coordinator
 {
@@ -25,7 +26,7 @@ namespace Marathon.Coordinator
             this.MaximizeBox = false;
             timer1.Start();
             email = index;
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = MySQL.connection;
             byte regStatus = 0;
             try
                {
@@ -95,7 +96,7 @@ namespace Marathon.Coordinator
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = MySQL.connection;
             try
             {
                 connection.Open();

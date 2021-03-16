@@ -95,6 +95,7 @@
     <Compile Include="Coordinator\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\MySQL.cs" />
     <Compile Include="Event\AboutEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +295,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

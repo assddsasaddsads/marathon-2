@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Marathon.Database;
 using MetroFramework;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -25,7 +26,7 @@ namespace Marathon.Runner
             this.MaximizeBox = false;
             this.ControlBox = false;
             timer1.Start();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = MySQL.connection;
             connection.Open();
             MySqlCommand newcommand = new MySqlCommand("SELECT DISTINCT CountryCode FROM country", connection);
             MySqlDataReader reader = newcommand.ExecuteReader();
@@ -58,7 +59,7 @@ namespace Marathon.Runner
                     {
                         if (metroTextBox2.Text == metroTextBox3.Text)
                         {
-                            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+                            MySqlConnection connection = MySQL.connection;
                             connection.Open();
                             MySqlCommand command = new MySqlCommand("UPDATE user SET Password = @password, FirstName = @firstname, LastName = @lastname WHERE Email = @login", connection);
                             command.Parameters.AddWithValue("@login", login);

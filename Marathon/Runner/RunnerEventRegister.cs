@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using MetroFramework;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
+using Marathon.Database;
 
 namespace Marathon.Runner
 {
@@ -26,7 +27,7 @@ namespace Marathon.Runner
             this.MaximizeBox = false;
             this.ControlBox = false;
             timer1.Start();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = MySQL.connection;
             MySqlCommand roleCommand = new MySqlCommand("SELECT RunnerId FROM runner WHERE Email = @login", connection);
             connection.Open();
             roleCommand.Parameters.AddWithValue("@login", data);
@@ -87,7 +88,7 @@ namespace Marathon.Runner
         {
             if (metroRadioButton2.Checked) brace = "B";
             else if (metroRadioButton3.Checked) brace = "C";
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = MySQL.connection;
             connection.Open();
             MySqlCommand command = new MySqlCommand("INSERT INTO registration (RunnerId, RegistrationDateTime, RaceKitOptionId, RegistrationStatusId, Cost, CharityId, SponsorshipTarget) VALUES (@RunnerId, @RegistrationDateTime, @RaceKitOptionId, @RegistrationStatusId, @Cost, @CharityId, @SponsorshipTarget)", connection);
             command.Parameters.AddWithValue("@RunnerId", login);
