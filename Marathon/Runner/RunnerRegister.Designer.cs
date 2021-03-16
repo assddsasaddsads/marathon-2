@@ -339,6 +339,7 @@
             this.metroButton2.TabIndex = 27;
             this.metroButton2.Text = "Отмена";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
             // 
             // metroDateTime1
             // 

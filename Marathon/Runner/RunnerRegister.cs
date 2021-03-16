@@ -12,11 +12,13 @@ using MetroFramework;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
 using Marathon.Database;
+using System.IO;
 
 namespace Marathon.Runner
 {
     public partial class RunnerRegister : MetroForm
     {
+        string image;
         TimeSpan d = new TimeSpan();
         DateTime date = new DateTime(2021, 3, 20);
         public RunnerRegister()
@@ -74,11 +76,12 @@ namespace Marathon.Runner
                             {
                                 gender = "Female";
                             }
-                            MySqlCommand command1 = new MySqlCommand("INSERT INTO runner (Email,Gender,DateOfBirth,CountryCode) values(@login,@gender,@dateOfBirth,@countryCode)", connection);
+                            MySqlCommand command1 = new MySqlCommand("INSERT INTO runner (Email,Gender,DateOfBirth,CountryCode,image) values(@login,@gender,@dateOfBirth,@countryCode,@image)", connection);
                             command1.Parameters.AddWithValue("@login", metroTextBox1.Text);
                             command1.Parameters.AddWithValue("@gender", gender);
                             command1.Parameters.AddWithValue("@dateOfBirth", metroDateTime1.Value);
                             command1.Parameters.AddWithValue("@countryCode", metroComboBox1.Text);
+                            command1.Parameters.AddWithValue("@image", image);
                             command1.Prepare();
                             command1.ExecuteNonQuery();
                             connection.Close();
@@ -153,15 +156,51 @@ namespace Marathon.Runner
             //43242342352323
         }
 
+        private Random _random = new Random(Environment.TickCount);
+
+        public string RandomString(int length)
+        {
+            string chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+            StringBuilder builder = new StringBuilder(length);
+
+            for (int i = 0; i < length; ++i)
+                builder.Append(chars[_random.Next(chars.Length)]);
+
+            return builder.ToString();
+        }
         private void metroButton3_Click(object sender, EventArgs e)
         {
+            if (image != null)
+            {
+                File.Delete(image);
+            }
             var ofd = new OpenFileDialog();
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                string newFileName = RandomString(10) + ".jpg";
                 var bit = new Bitmap(ofd.FileName);
                 pictureBox1.Image = bit;
+                metroTextBox6.Text = ofd.FileName;
+                string directory = AppDomain.CurrentDomain.BaseDirectory;
+                string path = ofd.FileName;
+                string newPath = directory + newFileName;
+                FileInfo fileInf = new FileInfo(path);
+                if (fileInf.Exists)
+                {
+                    fileInf.CopyTo(newPath, true);
+                    image = newFileName;
+                    // альтернатива с помощью класса File
+                    // File.Copy(path, newPath, true);
+                }
+            }
+        }
 
+        private void metroButton2_Click_1(object sender, EventArgs e)
+        {
+            if(image != null)
+            {
+                File.Delete(image);
             }
         }
     }
