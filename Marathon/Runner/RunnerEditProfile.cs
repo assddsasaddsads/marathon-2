@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Marathon.Database;
 using MetroFramework;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
@@ -15,6 +18,7 @@ namespace Marathon.Runner
 {
     public partial class RunnerEditProfile : MetroForm
     {
+        string image;
         TimeSpan d = new TimeSpan();
         DateTime date = new DateTime(2021, 3, 20);
         string login;
@@ -25,7 +29,7 @@ namespace Marathon.Runner
             this.MaximizeBox = false;
             this.ControlBox = false;
             timer1.Start();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             connection.Open();
             MySqlCommand newcommand = new MySqlCommand("SELECT DISTINCT CountryCode FROM country", connection);
             MySqlDataReader reader = newcommand.ExecuteReader();
@@ -58,7 +62,7 @@ namespace Marathon.Runner
                     {
                         if (metroTextBox2.Text == metroTextBox3.Text)
                         {
-                            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+                            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
                             connection.Open();
                             MySqlCommand command = new MySqlCommand("UPDATE user SET Password = @password, FirstName = @firstname, LastName = @lastname WHERE Email = @login", connection);
                             command.Parameters.AddWithValue("@login", login);
@@ -78,11 +82,12 @@ namespace Marathon.Runner
                             {
                                 gender = "Female";
                             }
-                            MySqlCommand command1 = new MySqlCommand("UPDATE runner SET Gender = @gender,DateOfBirth = @dateOfBirth,CountryCode = @countryCode WHERE Email = @login", connection);
+                            MySqlCommand command1 = new MySqlCommand("UPDATE runner SET Gender = @gender,DateOfBirth = @dateOfBirth,CountryCode = @countryCode, image = @image WHERE Email = @login", connection);
                             command1.Parameters.AddWithValue("@login", login);
                             command1.Parameters.AddWithValue("@gender", gender);
                             command1.Parameters.AddWithValue("@dateOfBirth", metroDateTime1.Value);
                             command1.Parameters.AddWithValue("@countryCode", metroComboBox1.Text);
+                            command1.Parameters.AddWithValue("@image", image);
                             command1.Prepare();
                             command1.ExecuteNonQuery();
                             connection.Close();
@@ -154,6 +159,45 @@ namespace Marathon.Runner
         private void metroDateTime1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private Random _random = new Random(Environment.TickCount);
+        public string RandomString(int length)
+        {
+            string chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+            StringBuilder builder = new StringBuilder(length);
+
+            for (int i = 0; i < length; ++i)
+                builder.Append(chars[_random.Next(chars.Length)]);
+
+            return builder.ToString();
+        }
+        private void metroButton3_Click(object sender, EventArgs e)
+        { 
+            if (image != null)
+            {
+                File.Delete(image);
+            }
+            var ofd = new OpenFileDialog();
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string newFileName = RandomString(10) + ".jpg";
+                var bit = new Bitmap(ofd.FileName);
+                pictureBox2.Image = bit;
+                metroTextBox6.Text = ofd.FileName;
+                string directory = AppDomain.CurrentDomain.BaseDirectory;
+                string path = ofd.FileName;
+                string newPath = directory + newFileName;
+                FileInfo fileInf = new FileInfo(path);
+                if (fileInf.Exists)
+                {
+                    fileInf.CopyTo(newPath, true);
+                    image = newFileName;
+                    // альтернатива с помощью класса File
+                    // File.Copy(path, newPath, true);
+                }
+            }
         }
     }
 }

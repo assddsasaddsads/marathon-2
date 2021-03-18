@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using MetroFramework;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
+using Marathon.Database;
 
 namespace Marathon.Runner
 {
@@ -25,7 +26,7 @@ namespace Marathon.Runner
             metroGrid1.ReadOnly = true;
             metroGrid1.BackgroundColor = Color.WhiteSmoke;
             metroGrid1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(102, 102, 102);
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             try
             {
                 connection.Open();

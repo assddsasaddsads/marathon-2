@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
+using Marathon.Database;
 
 namespace Marathon
 {
@@ -34,7 +35,7 @@ namespace Marathon
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-                MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+                MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("SELECT * FROM user WHERE Email = @login AND Password = @password", connection);
                 command.Parameters.AddWithValue("@login", metroTextBox1.Text);

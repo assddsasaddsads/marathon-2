@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using MetroFramework.Forms;
 using MetroFramework;
 using MySql.Data.MySqlClient;
+using Marathon.Database;
 
 namespace Marathon.Admin
 {
@@ -23,7 +24,7 @@ namespace Marathon.Admin
             this.MaximizeBox = false;
             this.ControlBox = false;
             timer1.Start();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
             connection.Open();
             MySqlCommand newcommand = new MySqlCommand("SELECT DISTINCT CountryCode FROM country", connection);
             MySqlDataReader reader = newcommand.ExecuteReader();
@@ -53,7 +54,7 @@ namespace Marathon.Admin
             if (metroTextBox2.Text == metroTextBox3.Text)
             {
                 string role;
-                MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");
+                MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);
                 connection.Open();
                 if (metroComboBox2.SelectedIndex == 0)
                 {

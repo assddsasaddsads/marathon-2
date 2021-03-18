@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MySql.Data.MySqlClient;
+using Marathon.Database;
 
 namespace Marathon.Sponsors
 {
@@ -17,7 +18,7 @@ namespace Marathon.Sponsors
         public CharityInfo()
         {
             InitializeComponent();
-            MySqlConnection connection = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            MySqlConnection connection = new MySqlConnection(MySQL.connectionUrl);//необходимая команда MySql
             connection.Open();//необходимая команда MySql
             MySqlCommand chart = new MySqlCommand("SELECT CharityName, CharityDescription FROM charity WHERE CharityId =\"" + AddSponsors.charity + "\"  ", connection);
             MySqlDataReader chartreader = chart.ExecuteReader();
