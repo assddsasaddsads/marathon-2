@@ -54,11 +54,13 @@
             this.metroButtonMinus = new MetroFramework.Controls.MetroButton();
             this.metroButtonPlus = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton2
             // 
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButton2.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.metroButton2.Location = new System.Drawing.Point(661, 419);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(116, 23);
@@ -451,6 +453,18 @@
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
             // 
+            // metroButton3
+            // 
+            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.metroButton3.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.metroButton3.Location = new System.Drawing.Point(461, 419);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(116, 23);
+            this.metroButton3.TabIndex = 69;
+            this.metroButton3.Text = "Пожертвовать";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            // 
             // AddSponsors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,6 +478,7 @@
             this.Controls.Add(this.metroLabelCharity);
             this.Controls.Add(this.metroTextBoxCharitySum);
             this.Controls.Add(this.metroComboBoxRunner);
+            this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel6);
@@ -516,5 +531,6 @@
         private MetroFramework.Controls.MetroLabel metroLabelSumInfo;
         private MetroFramework.Controls.MetroLabel metroLabelCharity;
         private MetroFramework.Controls.MetroTextBox metroTextBoxCharitySum;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }

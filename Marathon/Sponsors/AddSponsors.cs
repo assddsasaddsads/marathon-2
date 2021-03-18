@@ -104,6 +104,11 @@ namespace Marathon.Sponsors
             }
         }
 
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void metroButtonMinus_Click(object sender, EventArgs e)
         {
             a = Convert.ToInt32(metroTextBoxCharitySum.Text);
@@ -142,7 +147,6 @@ namespace Marathon.Sponsors
             {
                 metroLabelCharityName.Text = chartreader.GetString("CharityName");
             }
-
             connection2.Close();//необходимая команда MySql
             connection3.Close();//необходимая команда MySql
         }

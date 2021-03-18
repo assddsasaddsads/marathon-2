@@ -1,0 +1,22 @@
+
+            metroLabelCharityName.Text = metroComboBoxRunner.SelectedItem.ToString();
+            string a = metroComboBoxRunner.SelectedItem.ToString();
+            int.TryParse(string.Join("", a.Where(c => char.IsDigit(c))), out value);
+            MySqlConnection connection2 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            MySqlConnection connection3 = new MySqlConnection("server=localhost;database=marathon;user=root;password=lox123");//необходимая команда MySql
+            connection2.Open();//необходимая команда MySql
+            connection3.Open();//необходимая команда MySql
+            MySqlCommand runner2 = new MySqlCommand("SELECT CharityId FROM registration WHERE RunnerId =\"" + value + "\"  ", connection2);
+            MySqlDataReader runnerreader2 = runner2.ExecuteReader();
+            while (runnerreader2.Read())
+            {
+                charity = Convert.ToInt32(runnerreader2.GetString("CharityId"));
+            }
+            MySqlCommand chart = new MySqlCommand("SELECT CharityName FROM charity WHERE CharityId =\"" + charity + "\"  ", connection3);
+            MySqlDataReader chartreader = chart.ExecuteReader();
+            while (chartreader.Read())
+            {
+                metroLabelCharityName.Text = chartreader.GetString("CharityName");
+            }
+            connection2.Close();//необходимая команда MySql
+            connection3.Close();//необходимая команда MySql

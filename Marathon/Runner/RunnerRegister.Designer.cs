@@ -300,7 +300,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(24, 401);
+            this.metroLabel8.Location = new System.Drawing.Point(379, 361);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(53, 19);
             this.metroLabel8.TabIndex = 25;
@@ -310,7 +310,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(23, 355);
+            this.metroLabel9.Location = new System.Drawing.Point(378, 315);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(103, 19);
             this.metroLabel9.TabIndex = 23;
@@ -319,7 +319,7 @@
             // metroButton1
             // 
             this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton1.Location = new System.Drawing.Point(151, 456);
+            this.metroButton1.Location = new System.Drawing.Point(506, 416);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(116, 23);
             this.metroButton1.TabIndex = 26;
@@ -330,7 +330,7 @@
             // metroButton2
             // 
             this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton2.Location = new System.Drawing.Point(289, 456);
+            this.metroButton2.Location = new System.Drawing.Point(644, 416);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(116, 23);
             this.metroButton2.TabIndex = 27;
@@ -339,7 +339,7 @@
             // 
             // metroDateTime1
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(151, 355);
+            this.metroDateTime1.Location = new System.Drawing.Point(506, 315);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(254, 29);
@@ -349,7 +349,7 @@
             // 
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(151, 401);
+            this.metroComboBox1.Location = new System.Drawing.Point(506, 361);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(254, 29);
             this.metroComboBox1.TabIndex = 29;
@@ -368,7 +368,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 535);
+            this.ClientSize = new System.Drawing.Size(790, 535);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.metroDateTime1);
